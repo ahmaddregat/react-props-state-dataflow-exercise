@@ -1,5 +1,5 @@
 import Article from "./Article";
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Wardrobe extends Component {
   render() {
@@ -9,11 +9,10 @@ class Wardrobe extends Component {
       { type: "pants", color: "blue", size: "Medium" },
       { type: "accessory", color: "sapphire", size: "" },
       { type: "accessory", color: "lilac", size: "" },
-    ]
+    ];
 
-    return {/* your code here */ }
-
+    return wardrobe.map((c) => <Article key={wardrobe.indexOf(c)} info={c} />);
   }
 }
 
-export default Wardrobe
+export default Wardrobe;

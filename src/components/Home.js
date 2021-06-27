@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import Item from './Item';
+import React, { Component } from "react";
+import Item from "./Item";
 
 class Home extends Component {
-
-    render() {
-        return
-        {/* your code here */ }
-
-    }
+  render() {
+    const store = this.props.store;
+    return store.map((i) => (
+      <Item key={i.item} price={i.price} name={i.item} />
+    ));
+  }
 }
 
-export default Home
+export default Home;
